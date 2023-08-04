@@ -19,8 +19,7 @@ const Checkout = ({ cartItems, totalPrice }) => {
           </div>
         ))}
         <p className='checkout-total'>Total Price: ${totalPrice}</p>
-        {/* Your checkout form and other components can go here */}
-      </div>
+       </div>
     </div>
   );
 };
