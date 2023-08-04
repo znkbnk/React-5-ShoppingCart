@@ -1,9 +1,9 @@
 //App.js
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import ShoppingCart from './components/ShoppingCart';
-import Checkout from './components/Checkout';
+import React from "react";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import ShoppingCart from "./ShoppingCart";
+import Checkout from "./Checkout";
 
 const App = () => {
   return (
@@ -13,17 +13,18 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to="/checkout">Checkout</Link>
+              <Link to='/checkout'>Checkout</Link>
             </li>
           </ul>
         </nav>
-        <Switch>
-          <Route exact path="/" component={ShoppingCart} />
-          <Route path="/checkout" component={Checkout} />
-        </Switch>
+
+        <Routes>
+          <Route path='/' element={<ShoppingCart />} />
+          <Route path='/checkout' element={<Checkout />} />
+        </Routes>
       </div>
     </Router>
   );
