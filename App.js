@@ -12,7 +12,6 @@ const App = () => {
     // Add more items as needed
   ]);
 
-  // Handler functions for updating the cart items
   const handleRemoveItem = (itemId) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
   };
