@@ -4,7 +4,6 @@ import React from "react";
 
 const Checkout = ({ cartItems, totalPrice }) => {
   if (!cartItems || cartItems.length === 0) {
-    // When cartItems is not available or is empty, show the "Cart is empty or state data is missing" message
     return <div>Cart is empty or state data is missing.</div>;
   }
 
